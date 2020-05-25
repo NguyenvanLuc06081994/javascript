@@ -5,39 +5,43 @@
     <title>Máy tính</title>
 </head>
 <body>
- <h3>Caculator</h3>
- <input type="text" id="id1">
- <input type="text" id="id2">
+<h3>Caculator</h3>
+<br>
+<br>
+<input type="text" id="number1" placeholder="number1">
+<input type="text" id="number2" placeholder="number2">
+Result: <input type="text" id="result" placeholder="Result">
+<br>
+<br>
 <button type="button" onclick="add()">Addition(+)</button>
 <button type="button" onclick="sub()">Subtraction(-)</button>
-<button type="button" onclick="multi()">Multiplication(x)</button>
-<button type="button" onclick="divi()">Division(/)</button>
- <input type="text" id="kq" placeholder="result">
- <script>
-     function multi() {
-        let a = parseInt(document.getElementById('id1').value);
-        let b = parseInt(document.getElementById('id2').value);
+<button type="button" onclick="mul()">Multiplication(x)</button>
+<button type="button" onclick="div()">Division(/)</button>
+<script>
+    function add() {
+        let a = parseInt(document.getElementById('number1').value);
+        let b = parseInt(document.getElementById('number2').value);
+        let r = a + b;
+        document.getElementById('result').value = r;
+    }
+    function sub() {
+        let a = parseInt(document.getElementById('number1').value);
+        let b = parseInt(document.getElementById('number2').value);
+        let r = a - b;
+        document.getElementById('result').value = r;
+    }
+    function mul() {
+        let a = parseInt(document.getElementById('number1').value);
+        let b = parseInt(document.getElementById('number2').value);
         let r = a * b;
-        document.getElementById('kq').value = r;
-     }
-     function add() {
-         let a = parseInt(document.getElementById('id1').value);
-         let b = parseInt(document.getElementById('id2').value);
-         let r = a + b;
-         document.getElementById('kq').value = r;
-     }
-     function sub() {
-         let a = parseInt(document.getElementById('id1').value);
-         let b = parseInt(document.getElementById('id2').value);
-         let r = a - b;
-         document.getElementById('kq').value = r;
-     }
-     function divi() {
-         let a = parseInt(document.getElementById('id1').value);
-         let b = parseInt(document.getElementById('id2').value);
-         let r = a / b;
-         document.getElementById('kq').value = r;
-     }
- </script>
+        document.getElementById('result').value = r;
+    }
+    function div() {
+        let a = parseInt(document.getElementById('number1').value);
+        let b = parseInt(document.getElementById('number2').value);
+        let r = a / b;
+        document.getElementById('result').value = r;
+    }
+</script>
 </body>
 </html>

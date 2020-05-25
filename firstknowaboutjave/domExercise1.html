@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom</title>
+</head>
+<body>
+
+<input type="button" value="Click me!" id="object" onclick="change();">
+
+<script>
+   function change() {
+       let a = document.getElementById('object');
+       let t = a.type;
+       if (t == "button"){
+           a.type = 'text';
+       }else {
+           a.type = "button";
+       }
+
+   }
+
+</script>
+<div id="content">Lời nói đầu</div>
+<button type="button" onclick="color()">Color!</button>
+<button type="button" onclick="background()">background!</button>
+<button type="button" onclick="height()">height!</button>
+<button type="button" onclick="fontsize()">fontsize!</button>
+<script>
+    function color() {
+        document.getElementById('content').style.color = 'white';
+
+    }
+    function background() {
+        document.getElementById('content').style.background = 'blue';
+    }
+    function height() {
+        document.getElementById('content').style.height = '40px';
+    }
+    function fontsize() {
+        document.getElementById('content').style.fontSize = '30px';
+    }
+</script>
+    <div id="top">Xin chào các bạn!</div>
+<input type="button" value="append" id="btn-append">
+<script>
+    //Lấy button
+    let b = document.getElementById('btn-append');
+    // Thêm sự kiện click cho button
+    b.addEventListener("click", function () {
+     // Tạo mới 1 thẻ h1
+        let h1 = document.createElement('h1');
+        //thêm nội dung vào thẻ h1
+        h1.innerHTML = "Hello everyone!";
+        // đưa thẻ h1 vào trong thẻ div có chứa id = top
+        document.getElementById('top').appendChild(h1);
+    });
+</script>
+</body>
+</html>

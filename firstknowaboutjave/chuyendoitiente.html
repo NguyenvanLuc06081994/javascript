@@ -5,38 +5,34 @@
     <title>Chuyển đổi tiền tệ</title>
 </head>
 <body>
-<b>Amount</b>
-<input type="text" id="number">
+<b>Amount:</b>
+<input type="text" id="number" placeholder="inputmoney">
 <b>From Currency</b>
 <select  id="from">
-    <option value="1">USD</option>
     <option value="23000">VND</option>
+    <option value="1">USD</option>
     <option value="107">YEN</option>
 </select>
 <b>To Currency</b>
 <select id="to">
-<option value="1">USD</option>
-<option value="23000">VND</option>
-<option value="107">YEN</option>
+    <option value="23000">VND</option>
+    <option value="1">USD</option>
+    <option value="107">YEN</option>
 </select>
+<button type="button" onclick="Change()">Convert!</button>
 <br>
 <br>
-<button type="button" onclick="change();">Convert!</button>
-<br>
-<br>
-<b>Result:</b>
-<input type="text" id="kq">
+<b>Result : </b><input type="text" id="result" placeholder="Result">
 <script>
-    function change() {
+    function Change() {
+        let n;
+        let f;
         let t;
-        let fr;
-        let num;
-        num = parseInt(document.getElementById('number').value);
-        fr = parseInt(document.getElementById('from').value);
-        t = parseInt(document.getElementById('to').value);
-        let r;
-        r = num * t /fr;
-        document.getElementById('kq').value = r;
+            n = parseInt(document.getElementById('number').value);
+            f = parseInt(document.getElementById('from').value);
+            t = parseInt(document.getElementById('to').value);
+            let result = n * t / f;
+            document.getElementById('result').value = result;
     }
 </script>
 </body>
