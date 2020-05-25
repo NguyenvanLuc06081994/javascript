@@ -6,8 +6,13 @@
 
 </head>
 <body>
-<button type="button" onclick="message()">Click Me!</button>
-
+<p id="id1">Xin Chào Mọi Người</p>
+<button type="button" onclick="changeMessage();">Click!</button>
+<script>
+    function changeMessage() {
+        document.getElementById('id1').innerHTML = "Hello Everyone!";
+    }
+</script>
 
 </body>
 </html>

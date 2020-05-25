@@ -1,6 +1,10 @@
 
+let inputweight;
+let inputheight;
 
-let weight = prompt("Input weight:");
-let height = prompt("Input height");
-let area = weight * height;
+ inputweight = prompt("Input weight:");
+ inputheight = prompt("Input height");
+ let w = parseInt(inputweight);
+ let h = parseInt(inputheight);
+let area = w * h;
     document.write('area = ' + area);
