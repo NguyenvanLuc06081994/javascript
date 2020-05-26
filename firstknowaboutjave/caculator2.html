@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>caculator2</title>
+    <style>
+        table{
+            border: 1px solid black;
+            text-align: center;
+            width: 10%;
+        }
+        td, tr{
+            border: 1px solid black;
+
+        }
+        button{
+            width: 100%;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<h1>Caculator</h1>
+<table>
+    <tr>
+        <td colspan="4"><input type="text" id="result" size="50"></td>
+
+    </tr>
+    <tr>
+        <td><button type="button" onclick="Click(1)">1</button></td>
+        <td><button type="button" onclick="Click(2)">2</button></td>
+        <td><button type="button" onclick="Click(3)">3</button></td>
+        <td><button type="button" onclick="Click('+')">+</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="Click(4)">4</button></td>
+        <td><button type="button" onclick="Click(5)">5</button></td>
+        <td><button type="button" onclick="Click(6)">6</button></td>
+        <td><button type="button" onclick="Click('-')">-</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="Click(7)">7</button></td>
+        <td><button type="button" onclick="Click(8)">8</button></td>
+        <td><button type="button" onclick="Click(9)">9</button></td>
+        <td><button type="button" onclick="Click('*')">x</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="AC()">AC</button></td>
+        <td><button type="button" onclick="Click(0)">0</button></td>
+        <td><button type="button" onclick="caculate()">=</button></td>
+        <td><button type="button" onclick="Click('/')">/</button></td>
+    </tr>
+</table>
+<script>
+    //nhập giá trị
+    function Click(value) {
+        document.getElementById('result').value  += value;
+
+    }
+    // tính kết quả thông qua dấu =
+    function caculate() {
+        let cal = document.getElementById("result").value;
+        let result = eval(cal);
+        display(result);
+    }
+    function display(value) {
+        document.getElementById('result').value = value;
+    }
+    function AC() {
+        document.getElementById('result').value = 0;
+    }
+
+</script>
+</body>
+</html>

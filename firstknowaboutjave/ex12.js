@@ -4,7 +4,7 @@ document.write("Bài 3: Tính Diện Tích Hình Tròn.");
 document.write("<br>");
 let radius;
 radius = prompt("Nhập bán kính hình tròn:");
-let r = parseInt(radius);
+let r = parseFloat(radius);
 let area = r * r * 3.14;
 document.write("Diện tích hình tròn là: "+ area);
 document.write("<br/>");

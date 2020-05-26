@@ -18,29 +18,35 @@ Result: <input type="text" id="result" placeholder="Result">
 <button type="button" onclick="mul()">Multiplication(x)</button>
 <button type="button" onclick="div()">Division(/)</button>
 <script>
+
     function add() {
         let a = parseInt(document.getElementById('number1').value);
         let b = parseInt(document.getElementById('number2').value);
+
         let r = a + b;
         document.getElementById('result').value = r;
     }
     function sub() {
         let a = parseInt(document.getElementById('number1').value);
         let b = parseInt(document.getElementById('number2').value);
-        let r = a - b;
-        document.getElementById('result').value = r;
+
+        let c = a - b;
+        document.getElementById('result').value = c;
     }
     function mul() {
         let a = parseInt(document.getElementById('number1').value);
         let b = parseInt(document.getElementById('number2').value);
-        let r = a * b;
-        document.getElementById('result').value = r;
+
+
+        let d = a * b;
+        document.getElementById('result').value = d;
     }
     function div() {
         let a = parseInt(document.getElementById('number1').value);
         let b = parseInt(document.getElementById('number2').value);
-        let r = a / b;
-        document.getElementById('result').value = r;
+
+        let e = a / b;
+        document.getElementById('result').value = e;
     }
 </script>
 </body>
