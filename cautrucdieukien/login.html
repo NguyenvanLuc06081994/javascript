@@ -6,20 +6,20 @@
 </head>
 <body>
 <script>
-        let a = prompt("Username:");
-        if (a == "Admin"){
-            let b = prompt("Password");
-            if (b == "The Master"){
+        let userName = prompt("Username:");
+        if (userName === "Admin"){
+            let passWord = prompt("Password");
+            if (passWord === "The Master"){
                 alert("welcome");
-            }else if (b== ""){
+            }else if (passWord === ""){
                 alert("Canceled");
             }else{
                 alert("Wrong password");
             }
-        }else if (a == ""){
+        }else if (userName === ""){
             alert("canceld");
         }else{
-            alert("I dont know you");
+            alert("I don't know you");
         }
 </script>
 </body>

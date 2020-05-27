@@ -12,13 +12,13 @@ Năm :<input type="text" id="year">
 <script>
     function Check(){
     let y = parseInt(document.getElementById('year').value);
-    let a = y % 4;
-    let b = y % 100;
-    let c = y % 400;
-    if (c==0){
+    let resultMod4 = y % 4;
+    let resultMod100 = y % 100;
+    let resultMod400 = y % 400;
+    if (resultMod400===0){
         document.getElementById('note').innerHTML = 'năm nhuận';
-    }else if (a==0){
-        if (b!=0){
+    }else if (resultMod4===0){
+        if (resultMod100!==0){
             document.getElementById('note').innerHTML = 'năm nhuận';
         }
     }else{

@@ -2,9 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Caculator</title>
+    <style>
+        td {
+            border: 1px solid black;
+        }
+        button{
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
+<table>
+    <tr>
+        <td colspan="4"><input type="text" id="screen"></td>
+    </tr>
+    <tr>
+        <td><button onclick="Clicknumber(1)">1</button></td>
+        <td><button onclick="Clicknumber(2)">2</button></td>
+        <td><button onclick="Clicknumber(3)">3</button></td>
+        <td><button onclick="Clicknumber('+')">+</button></td>
 
+    </tr>
+    <tr>
+        <td><button onclick="Clicknumber(4)">4</button></td>
+        <td><button onclick="Clicknumber(5)">5</button></td>
+        <td><button onclick="Clicknumber(6)">6</button></td>
+        <td><button onclick="Clicknumber('-')">-</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="Clicknumber(7)">7</button></td>
+        <td><button onclick="Clicknumber(8)">8</button></td>
+        <td><button onclick="Clicknumber(9)">9</button></td>
+        <td><button onclick="Clicknumber('x')">x</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="Clearnumber()">C</button></td>
+        <td><button onclick="Clicknumber(0)">0</button></td>
+        <td><button onclick="Cal()">=</button></td>
+        <td><button onclick="Clicknumber('/')">/</button></td>
+    </tr>
+</table>
+<script>
+    let screen = document.getElementById('screen');
+    function Clicknumber(value) {
+        screen.value += value;
+    }
+    function Cal() {
+       let result = eval(screen.value);
+       screen.value = result;
+    }
+    function Clearnumber() {
+        screen.value = screen.value.substring(0 , screen.value.length - 1)
+    }
+</script>
 </body>
 </html>

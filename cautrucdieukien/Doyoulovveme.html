@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do you love me?</title>
+</head>
+<body>
+    <h3>Do you love me?</h3><br>
+<button onclick="Yes()">Yes</button>
+<button id="move" onmouseover="No()">No</button>
+<script>
+    function Yes() {
+    alert("You are right!");
+    }
+    function init() {
+       let moveN =  document.getElementById('move');
+       moveN.style.position = 'relative';
+       moveN.style.left = "0px";
+       moveN.style.right = "0px";
+       moveN.style.top = "0px";
+       moveN.style.bottom = "0px";
+    }
+    function No() {
+        moveN.style.right = parseInt(moveN.style.right)  + Math.floor((Math.random() * 100) + 1) + 'px';
+        moveN.style.left = parseInt(moveN.style.left)  - Math.floor((Math.random() * 100) + 1) + 'px';
+        moveN.style.top = parseInt(moveN.style.top)  - Math.floor((Math.random() * 100) + 1) + 'px';
+        moveN.style.bottom = parseInt(moveN.style.bottom)  + Math.floor((Math.random() * 100) + 1) + 'px';
+    }
+</script>
+</body>
+</html>

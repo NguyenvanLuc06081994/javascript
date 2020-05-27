@@ -6,12 +6,12 @@
 </head>
 <body>
 <input type="number" id="number" min="1" max="12">
-<button type="button" onclick="Countday()">Countday!</button>
+<button type="button" onclick="demngay()">Count!</button>
 <p id="screen">0</p>
 <script>
 
 
-    function Countday() {
+    function demngay() {
         let s = document.getElementById('screen');
         let m = + document.getElementById('number').value;
         switch (m) {
@@ -24,9 +24,19 @@
             case 11 :
                 s.innerHTML = "Tháng " + m + " có 30 ngày";
                 break;
-             default :
+            case 1 :
+            case 3 :
+            case 5 :
+            case 7 :
+            case 8 :
+            case 10 :
+            case 12 :
                 s.innerHTML = "Tháng " + m + " có 31 ngày";
+                break;
+            default:
+                s.innerHTML = "Tháng này không tồn tại!"
         }
+
     }
 </script>
 </body>
