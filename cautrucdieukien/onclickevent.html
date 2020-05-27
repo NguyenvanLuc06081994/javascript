@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Su Kien Chuot</title>
+    <style>
+        img {
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+<img src="https://cf.shopee.vn/file/c364898635494be434755b5e9a094078" id="img" alt="not found" >
+<br>
+<br>
+<button type="button" onclick="MoveR()">Move!</button>
+
+<script>
+    // let a = document.getElementById('img');
+    // function init() {
+    //     a.style.position = 'relative';
+    //     a.style.left = "0px";
+    //  console.log(2);
+    // }
+    // function MoveR() {
+    //
+    //   a.style.left = parseInt(a.style.left) + 10 +'px';
+    // console.log(1);
+    // }
+    // window.onload = init;
+    let a = document.getElementById('img');
+    function init() {
+        a.style.position = "relative";
+        a.style.left = "0px";
+    }
+    function MoveR() {
+        a.style.left = parseInt(a.style.left)  + 10 + 'px';
+    }
+    window.init();
+</script>
+</body>
+</html>
