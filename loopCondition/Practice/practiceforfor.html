@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For in For</title>
+</head>
+<body>
+<script>
+
+let sout;
+sout = "<table border = '1' widthd = '300' cellsapacing = '0' cellpadding = '3'>"
+for (let i = 1; i <=10 ; i++) {
+    sout += "<tr>";
+    for (let j = 1; j <=10 ; j++) {
+        sout = sout + "<td>" + `${i} x ${j} = ` + i * j+ "</td>";
+    }
+    sout += "</tr>";
+}
+sout = sout +"</table>";
+document.write(sout);
+    // for (let i = 1; i <= 10 ; i++) {
+    //     document.write("<br>")
+    //     for (let j = 1; j <=10 ; j++) {
+    //         let result = i * j;
+    //         document.write( result + "    ");
+    //     }
+    // }
+
+
+
+
+    // let i = j = 1;
+    // while (i < 10){
+    //     document.write("<br/>");
+    //     i++;
+    //
+    //
+    //     while( j<10){
+    //         let result = i * j;
+    //         document.write( result + "   ");
+    //         j++;
+    //     }
+    //     j = 1;
+    // }
+</script>
+</body>
+</html>
