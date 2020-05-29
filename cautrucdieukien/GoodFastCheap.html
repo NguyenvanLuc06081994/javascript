@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Good Fast Cheap</title>
+</head>
+<body>
+<h1>Good Fast Cheap</h1>
+
+<input type="checkbox" id="good" onchange="change(id)">Good
+    <br>
+<input type="checkbox" id="fast" onchange="change(id)">Fast
+    <br>
+<input type="checkbox" id="cheap" onchange="change(id)"> Cheap
+    <br>
+
+<script>
+
+    let good = document.getElementById('good');
+    let fast = document.getElementById('fast');
+    let cheap = document.getElementById('cheap');
+    function change(id) {
+        switch (id) {
+            case "good":
+                if(fast.checked == true && cheap.checked == true){
+                    cheap.checked = false;
+                }
+                break;
+            case "fast":
+                if(good.checked == true && cheap.checked == true){
+                    good.checked = false;
+                }
+                break;
+            case "cheap" :
+                if(fast.checked == true && good.checked == true){
+                    fast.checked = false;
+                }
+                break;
+        }
+    }
+
+
+
+
+    // let good = document.getElementById('good');
+    // let fast = document.getElementById('fast');
+    // let cheap = document.getElementById('cheap');
+    // function change(id) {
+    //     switch (id) {
+    //         case "good" :
+    //             if (fast.checked == true && cheap.checked == true){
+    //                 cheap.checked = false;
+    //             }
+    //             break;
+    //         case "fast":
+    //             if (good.checked == true && cheap.checked == true){
+    //                 good.checked = false;
+    //             }
+    //             break;
+    //         case "cheap":
+    //             if (good.checked == true && fast.checked == true){
+    //                 fast.checked = false;
+    //             }
+    //             break;
+    //     }
+    // }
+
+</script>
+
+
+</body>
+</html>

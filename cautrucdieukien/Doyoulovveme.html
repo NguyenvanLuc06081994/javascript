@@ -5,27 +5,35 @@
     <title>Do you love me?</title>
 </head>
 <body>
-    <h3>Do you love me?</h3><br>
+<h1> Do You Love Me?</h1>
 <button onclick="Yes()">Yes</button>
-<button id="move" onmouseover="No()">No</button>
+<button id="moveNo" onmouseover="No()" style="position: absolute; left: 300px; top: 250px;">No</button>
 <script>
     function Yes() {
-    alert("You are right!");
-    }
-    function init() {
-       let moveN =  document.getElementById('move');
-       moveN.style.position = 'relative';
-       moveN.style.left = "0px";
-       moveN.style.right = "0px";
-       moveN.style.top = "0px";
-       moveN.style.bottom = "0px";
+        alert("I Love You Too ^^");
     }
     function No() {
-        moveN.style.right = parseInt(moveN.style.right)  + Math.floor((Math.random() * 100) + 1) + 'px';
-        moveN.style.left = parseInt(moveN.style.left)  - Math.floor((Math.random() * 100) + 1) + 'px';
-        moveN.style.top = parseInt(moveN.style.top)  - Math.floor((Math.random() * 100) + 1) + 'px';
-        moveN.style.bottom = parseInt(moveN.style.bottom)  + Math.floor((Math.random() * 100) + 1) + 'px';
+        let moveN = document.getElementById('moveNo');
+        let left = Math.round(Math.random() * window.innerWidth);
+        let top = Math.round(Math.random() * window.innerHeight);
+        moveN.style.left = left + "px";
+        moveN.style.top = top + "px";
     }
 </script>
+<!--<h1>Do You Love Me?</h1>-->
+<!--<button onclick="Yes()">Yes</button>-->
+<!--<button id="moveNo" onmouseover="No()" style="position: absolute; left: 300px; top : 250px;">No</button>-->
+<!--<script>-->
+<!--    function Yes() {-->
+<!--        alert("I Love You Too! ^^");-->
+<!--    }-->
+<!--    function No() {-->
+<!--        let moveN = document.getElementById('moveNo');-->
+<!--        let left = Math.round(Math.random() * window.innerWidth);-->
+<!--        let top = Math.round(Math.random() * window.innerHeight);-->
+<!--        moveN.style.top = top + "px";-->
+<!--        moveN.style.left = left + "px";-->
+<!--    }-->
+<!--</script>-->
 </body>
 </html>
