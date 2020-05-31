@@ -5,14 +5,14 @@
     <title>caculator2</title>
     <style>
         table{
-            border: 1px solid black;
+            border: 1px solid #000000;
             text-align: center;
             /*width: 10%;*/
             margin: auto;
             height: 500px;
         }
         td, tr{
-            border: 1px solid black;
+            border: 1px solid #000000;
 
         }
         button{
@@ -75,42 +75,23 @@
     </tr>
 </table>
 <script>
-    // //nhập giá trị
-    // function clickBtn(value) {
-    //     document.getElementById('result').value  += value;
-    //
-    // }
-    // // tính kết quả thông qua dấu =
-    // function caculate() {
-    //     let cal = document.getElementById("result").value;
-    //     let result = eval(cal);
-    //     display(result);
-    // }
-    // function display(value) {
-    //     document.getElementById('result').value = value;
-    // }
-    // function AC() {
-    //     document.getElementById('result').value = 0;
-    // }
-    let screen = document.getElementById("screen");
-
+    // hiển thị lên màn hình
+    let screen = document.getElementById('screen');
     function clickBtn(value) {
         screen.value += value;
     }
-
+    // Tính toán với dấu =
     function cal() {
-        let result = eval(screen.value);
-        screen.value = result;
+        screen.value = eval(screen.value);
     }
-
+    // Xóa về kí tự rỗng
+    // function clearScreen() {
+    //     screen.value = '';
+    // }
+    // Xóa từng kí tự
     function clearScreen() {
-        screen.value = "";
+        screen.value = screen.value.substring(0 , screen.value.length -1);
     }
-
-    function del() {
-        screen.value = screen.value.substring(0,screen.value.length-1)
-    }
-
 </script>
 </body>
 </html>
