@@ -13,16 +13,13 @@
     let temp;
 
     let sum;
-    for (let i = 0; i < 18 ; i++) {
+    for (let i = 2; i < 20 ; i++) {
         temp = a + b;
         a = b;
         b = temp;
 
         sum = temp + a + b;
         document.write(temp + '<br>');
-        if (temp % 5 === 0){
-            break;
-        }
 
 
     }

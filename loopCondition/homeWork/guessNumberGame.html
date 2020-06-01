@@ -9,16 +9,22 @@
 <script>
     let min = +prompt("Input Min number :");
     let max = +prompt("Input Max number :");
-    let numberGame = +prompt("Input Your Number");
-    let count = Math.floor(Math.random() * max)+ min ;
-    function Game() {
-        if (numberGame === count){
+    let computerNumber = +Math.floor((Math.random() * max)+ min) ;
+    alert(computerNumber);
+    for (let i = 1; i >0 ; i++) {
+        let numberGame = +prompt("Input your number");
+        if (numberGame === computerNumber){
             alert("Congratulations!");
-
+            break;
+        }else if (numberGame > computerNumber){
+            alert("Wrong! yournumber is higher! Do it again");
         }else {
-            alert("Do it again");
+            alert("Wrong! your number is lower! Do it again")
         }
+
+
     }
+
 </script>
 </body>
 </html>
