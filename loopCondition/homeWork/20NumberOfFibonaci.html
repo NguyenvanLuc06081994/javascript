@@ -6,20 +6,21 @@
 </head>
 <body>
 <script>
-    let count = 0;
-    let count1 =1;
-    document.write(count + '<br>');
-    document.write(count1 + '<br>');
-    let count2;
+    let a = 0;
+    let b =1;
+    document.write(a + '<br>');
+    document.write(b + '<br>');
+    let temp;
 
     let sum;
-    for (let i = 0; i <18 ; i++) {
-        count2 = count + count1;
-        count = count1;
-        count1 = count2;
-        sum = count + count1 + count2;
-        document.write(count2 + '<br>');
-        if (count2 % 5== 0){
+    for (let i = 0; i < 18 ; i++) {
+        temp = a + b;
+        a = b;
+        b = temp;
+
+        sum = temp + a + b;
+        document.write(temp + '<br>');
+        if (temp % 5 === 0){
             break;
         }
 

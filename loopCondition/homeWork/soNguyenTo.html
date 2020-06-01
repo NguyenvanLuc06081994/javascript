@@ -7,15 +7,39 @@
 <body>
 <h3>Số Nguyên Tố</h3>
 <script>
-    let number = +prompt(" Nhap so nguyen to can in ra :")
-    let count = 0;
-    let N = 2;
-    while ( count <= number){
-        i = 0;
-        while () {
+   function isPrime(number) {
+        if (number < 2){
+            return false;
+        }else {
+            for (let i = 2; i <number ; i++) {
+                if(number % i === 0){
+                    return false;
+                }
 
+            }
+            return true;
         }
-    }
+
+   }
+   function countPrime() {
+        let count = +prompt("Nhap so Nguyen To Can In ra :");
+        let j = 1;
+        let number = 2;
+        let sum = 0;
+        while(j <= count){
+            if (isPrime(number)){
+                document.write(number + "<br>");
+                j++;
+                sum += number;
+            }
+            number++;
+        }
+
+       document.write("sum is :" +sum);
+
+   }
+
+   countPrime();
 </script>
 </body>
 </html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lai Suat Ngan Hang</title>
+</head>
+<body>
+<script>
+    let money = +prompt("So Tien Gui Vao :");
+    let interest = parseFloat(prompt("Lai Suat Ngan Hang"));
+    let month = +prompt("so thang gui");
+    for (let i = 1; i <=month ; i++) {
+        money = money *(1+interest);
+        document.write(money + "<br>");
+    }
+    // let interest = +prompt("Lai suat");
+    // let month = +prompt("thang");
+    // let result = money *(1+ interest/100)**month;
+    // alert(result);
+
+</script>
+</body>
+</html>
