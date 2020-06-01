@@ -10,10 +10,11 @@
     let min = +prompt("Input Min number :");
     let max = +prompt("Input Max number :");
     let numberGame = +prompt("Input Your Number");
-    let count = Math.round(Math.random() * (max - min));
+    let count = Math.floor(Math.random() * max)+ min ;
     function Game() {
         if (numberGame === count){
             alert("Congratulations!");
+
         }else {
             alert("Do it again");
         }

@@ -9,58 +9,34 @@
     function isPrime(number) {
         if (number < 2){
             return false;
-        } else if (number === 2){
+        }else if (number === 2){
             return true;
-        }else{
+        }else {
             for (let i = 2; i < number ; i++) {
-                if (number % i ===0){
+                if (number % i === 0){
                     return false;
                 }
             }
             return true;
         }
     }
-    function  countPrime() {
-        let num = +prompt("nhap so luong snt :");
-        let number = 1;
-        let count = 1;
-        while (count <= num) {
+    let sum = 0;
+    function countPrime() {
+        let num = +prompt("Nhap So luong stn");
+        let j = 1;
+        let number = 2;
+        while ( j <= num ){
             if (isPrime(number)){
                 document.write(number + "<br>")
-                count++;
+                j++;
+                sum += number;
             }
-            number ++;
+            number++;
         }
+
+        document.write("sum is : "+ sum);
     }
-    countPrime();
-//    function isPrime(number) {
-//        if (number < 2){
-//            return false;
-//        }else if (number == 2){
-//            return true;
-//        }else{
-//            for (let i = 2; i <number ; i++) {
-//                if (number % i == 0){
-//                    return false;
-//                }
-//            }
-//            return true;
-//        }
-//
-//     }
-//     function countPrime() {
-//         let num = +prompt("nhap so luong so nt :");
-//         let count = 1;
-//         let number = 1;
-//         while (count <= num){
-//             if (isPrime(number)){
-//                 document.write(number + "<br>");
-//                 count ++;
-//             }
-//             number++;
-//         }
-//     }
-//    countPrime();
+    countPrime()
 
 </script>
 </body>
