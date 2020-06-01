@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+</head>
+<body>
+<button onclick="Game">Play</button>
+<script>
+    let min = +prompt("Input Min number :");
+    let max = +prompt("Input Max number :");
+    let numberGame = +prompt("Input Your Number");
+    let count = Math.round(Math.random() * (max - min));
+    function Game() {
+        if (numberGame === count){
+            alert("Congratulations!");
+        }else {
+            alert("Do it again");
+        }
+    }
+</script>
+</body>
+</html>

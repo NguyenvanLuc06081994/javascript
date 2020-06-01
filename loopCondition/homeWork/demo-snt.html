@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Snt</title>
+</head>
+<body>
+<script>
+
+    let num = +prompt("Nhap So Luong SNT:");
+    let count = 1;
+    let number = 2;
+    while (count <= num){
+        if (number == 2){
+            document.write(number + "<br>");
+            number ++;
+            count++;
+        }else{
+            number ++;
+            let flag =true;
+            for (let i = 2; i < number ; i++) {
+                if (number % i ==0){
+                    flag = false;
+                }
+            }
+            if (flag){
+                document.write(number+"<br>");
+                count ++;
+            }
+        }
+    }
+
+
+//     let num = +prompt("Nhap So Luong so nguyen to:");
+//     let count = 1;
+//     let number = 2;
+//     while (count <= num) {
+//         if (number == 2) {
+//             document.write(number + "<br>");
+//             number++;
+//             count++;
+//         } else {
+//             number++;
+//             let flag = true;
+//             for (let i = 2; i < number ; i++) {
+//                 if (number % i == 0){
+//                     flag = false;
+//                 }
+//             }
+//             if (flag){
+//                 document.write(number + "<br>");
+//                 count ++;
+//             }
+//         }
+//
+//     }
+
+
+</script>
+</body>
+</html>

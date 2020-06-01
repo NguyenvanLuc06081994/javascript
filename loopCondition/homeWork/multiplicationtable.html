@@ -7,17 +7,29 @@
 <body>
 <h3>Multiplication Table</h3>
 <script>
-    let sout = "<table border='1' cellspacing='0' width='800'>"
+    let sout = "<table border='1px' cellspacing='0' width='800px'>";
     for (let i = 1; i <=10 ; i++) {
-
-        sout = sout + "<tr>"
+        sout = sout +"<tr>"
         for (let j = 1; j <=10 ; j++) {
             let result = i * j;
-            sout = sout + "<td>" + `${i} x ${j} = `+ result + '</td>';
+            sout = sout + "<td>" + `${i} x ${j} = ` + result + "</td>";
         }
-        sout = sout + "</tr>"
+        sout =sout + "</tr>"
     }
     document.write(sout);
+
+
+    // let sout = "<table border='1' cellspacing='0' width='800'>"
+    // for (let i = 1; i <=10 ; i++) {
+    //
+    //     sout = sout + "<tr>"
+    //     for (let j = 1; j <=10 ; j++) {
+    //         let result = i * j;
+    //         sout = sout + "<td>" + `${i} x ${j} = `+ result + '</td>';
+    //     }
+    //     sout = sout + "</tr>"
+    // }
+    // document.write(sout);
 </script>
 </body>
 </html>
