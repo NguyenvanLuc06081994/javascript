@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Type anything Slowly</title>
+</head>
+<body>
+    <textarea id="txt" rows="20" cols="80" onkeydown="ChangeWord()"></textarea>
+<script>
+    let arr =["T", "Ô","I"," ","L","À"," ","M","Ộ", "T"," ","Đ","Ứ","A"," ","N","G","Ố","C","!","!"];
+    let data = '';
+    let txt = document.getElementById('txt');
+    function ChangeWord() {
+        for (let i = 0; i < arr.length ; i++) {
+            data += arr[i];
+            if (i === arr.length-1){
+                data = '';
+            }
+        }
+        txt.value =data;
+    }
+</script>
+</body>
+</html>

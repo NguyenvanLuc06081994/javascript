@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+<h3>Dictionary</h3>
+<input type="text" id="txt">
+<button onclick="search()">Search</button>
+<p id="result"></p>
+<script>
+    let arr = ["money", "tiger", "oanh"];
+    let arr1 = ["tien", "ho", "su tu"];
+    let txt = document.getElementById('txt');
+    function search() {
+        for (let i = 0; i < 3 ; i++) {
+            if (txt.value === arr[i]){
+                txt.value = arr1[i];
+            }
+        }
+        document.getElementById('result').innerHTML = txt.value;
+    }
+</script>
+</body>
+</html>
