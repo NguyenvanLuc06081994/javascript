@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex3</title>
+</head>
+<body>
+<script>
+let str = 'ABACACSCSAdsfassadsa';
+let upper = 'QWERTYUIOPASDFGHJKLZXCVBNM';
+let lower = 'qwertyuiopasdfghjklzxcvbnm';
+let result = [];
+for (let i = 0; i <str.length ; i++) {
+    if (upper.includes(str[i])){
+        result.push(str[i].toLowerCase());
+    }else if (lower.includes(str[i])){
+        result.push(str[i].toUpperCase());
+    }else{
+        result.push(str[i]);
+    }
+}
+document.write(result.join(''));
+</script>
+</body>
+</html>
