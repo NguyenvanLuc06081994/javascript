@@ -9,37 +9,65 @@
 <p id="carogame"></p>
 <input type="button" value="Change Value" onclick="changeValue()">
 <script>
-let b =document.getElementById("carogame");
-let arr = [];
-let data = "";
-for (let i = 0; i <5 ; i++) {
-    arr[i] = [0, 0, 0, 0, 0];
-}
-for (let i = 0; i < 5 ; i++) {
-    data += "<br>";
-    for (let j = 0; j <5 ; j++) {
-        data += arr[i][j]+ "&nbsp;&nbsp;";
+    let result = document.getElementById('carogame');
+    let arr = [];
+    let data ='';
+    for (let i = 0; i <5 ; i++) {
+        arr[i] = [0, 0, 0, 0, 0];
     }
-}
-data += "<br><br> <input type='button' value='Change Value' onclick='changeValue()'>"
-b.innerHTML =data;
-
-
-
-function changeValue() {
-    let positionX = +prompt("X: ");
-    let positionY = +prompt("Y: ");
-    data ="";
-    arr[positionX][positionY] = "x";
-    for (let i = 0; i < 5 ; i++) {
+    for (let i = 0; i <5 ; i++) {
         data += "<br>";
         for (let j = 0; j <5 ; j++) {
-            data += arr[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            data += arr[i][j] + "&nbsp;&nbsp;";
         }
     }
-    data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
-    b.innerHTML = "<hr/>" + data;
-}
+    result.innerHTML= data;
+    function changeValue() {
+        let positionX = +prompt("Input position X :");
+        let positionY = +prompt("Input position Y :");
+        arr[positionX][positionY] = "x";
+        data ='';
+        for (let i = 0; i < 5 ; i++) {
+            data += "<br>";
+            for (let j = 0; j <5 ; j++) {
+                data += arr[i][j] + "&nbsp;&nbsp;";
+            }
+        }
+        result.innerHTML = data;
+    }
+
+
+
+
+
+
+    // let result =document.getElementById('carogame');
+    // let arr =[];
+    // let data ='';
+    // for (let i = 0; i <5 ; i++) {
+    //     arr[i]= [0, 0, 0, 0, 0];
+    // }
+    // for (let i = 0; i <5 ; i++) {
+    //     data += "<br>";
+    //     for (let j = 0; j < 5 ; j++) {
+    //         data += arr[i][j] + "&nbsp;&nbsp;";
+    //     }
+    // }
+    // result.innerHTML = data;
+    // function changeValue() {
+    //     let positionX =+prompt("PositionX:");
+    //     let positionY =+prompt("PositionY:");
+    //     data = '';
+    //     arr[positionX][positionY] = "x";
+    //     for (let i = 0; i <5 ; i++) {
+    //         data += "<br>";
+    //         for (let j = 0; j <5 ; j++) {
+    //            data +=arr[i][j] + "&nbsp;&nbsp;";
+    //         }
+    //     }
+    //     result.innerHTML = data;
+    // }
+    //
 </script>
 </body>
 </html>
