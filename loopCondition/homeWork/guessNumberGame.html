@@ -7,23 +7,23 @@
 <body>
 <button onclick="Game">Play</button>
 <script>
-    let min = +prompt("Input Min number :");
-    let max = +prompt("Input Max number :");
-    let computerNumber = +Math.floor((Math.random() * max)+ min) ;
+    let min = +prompt("input min :");
+    let max = +prompt("input max");
+    let computerNumber = Math.floor((Math.random()* max)+ min);
     alert(computerNumber);
-    for (let i = 1; i >0 ; i++) {
-        let numberGame = +prompt("Input your number");
-        if (numberGame === computerNumber){
-            alert("Congratulations!");
+    for (let i = 1; i <= 3 ; i++) {
+        let yourNumber = +prompt("Input your number");
+        if (yourNumber === computerNumber){
+            alert("Congratulation!");
             break;
-        }else if (numberGame > computerNumber){
-            alert("Wrong! yournumber is higher! Do it again");
-        }else {
-            alert("Wrong! your number is lower! Do it again")
+        }else if (yourNumber > computerNumber){
+            alert("wrong! your number is higher! Choose again!");
+        }else{
+            alert("wrong!your number is lower! Choose again!");
         }
 
-
     }
+
 
 </script>
 </body>

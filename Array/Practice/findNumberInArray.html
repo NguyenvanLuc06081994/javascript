@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find Number</title>
+</head>
+<body>
+<script>
+    let yourNumber = +prompt("Input your number :");
+    let arr = [-3,5,1,3,2,10,15,20,5,-3,4,2];
+    let length = arr.length - 1;
+    for (let i = 0; i <= length ; i++) {
+        if (yourNumber === arr[i]){
+            alert("We found " +yourNumber+ " at "+ i );
+
+        }
+    }
+
+</script>
+</body>
+</html>

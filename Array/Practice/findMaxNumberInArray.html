@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find Max Number</title>
+</head>
+<body>
+<script>
+    let arr = [-3, 5, 1, 30, 2, 10]
+    let max = arr[0];
+    let index = 0;
+    for (let i = 1; i <arr.length ; i++) {
+            if (max < arr[i]){
+                max = arr[i];
+                index = i;
+            }
+    }
+   alert("max is : "+ max + " at " +index);
+</script>
+</body>
+</html>

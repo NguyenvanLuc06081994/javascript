@@ -12,13 +12,12 @@
     document.write(b + '<br>');
     let temp;
 
-    let sum;
+    let sum = 1;
     for (let i = 2; i < 20 ; i++) {
         temp = a + b;
         a = b;
         b = temp;
-
-        sum = temp + a + b;
+        sum =sum + temp;
         document.write(temp + '<br>');
 
 
