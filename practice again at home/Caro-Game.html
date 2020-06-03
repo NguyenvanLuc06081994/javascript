@@ -3,8 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Caro Game</title>
+    <style>
+        tr, td {
+            border: 1px solid #b4a6ff;
+        }
+
+        td {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            font-size: 35px;
+        }
+    </style>
 </head>
 <body>
+<input id="row" value="12">
+<input id="col" value="12">
+<button onclick="drawBoard()">Draw Board</button>
+<table cellspacing="0" id="caro"></table>
+<script>
+    // Vẽ Bảng
+    function drawBoard() {
+        let board = document.getElementById("caro");
+        let col = document.getElementById("col").value;
+        let row = document.getElementById("row").value;
+        let str = "";
+        for (let i = 0; i <row ; i++) {
+            str += "<tr>";
+            for (let j = 0; j < col ; j++) {
+                str += "<td></td>";
+            }
+        }
+        board.innerHTML = str;
+    }
+    // Click vào ô thì chuyển 0 - X;
+    function clickCell() {
+
+    }
+</script>
+
 
 </body>
 </html>

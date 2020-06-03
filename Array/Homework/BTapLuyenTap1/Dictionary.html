@@ -13,13 +13,17 @@
     let arr = ["money", "tiger", "oanh"];
     let arr1 = ["tien", "ho", "su tu"];
     let txt = document.getElementById('txt');
+    let result = document.getElementById('result');
     function search() {
-        for (let i = 0; i < 3 ; i++) {
-            if (txt.value === arr[i]){
-                txt.value = arr1[i];
+        for (let i = 0; i < arr.length; i++) {
+            if (txt.value === arr[i]) {
+                result.innerHTML = arr1[i];
+                break;
+            } else {
+                result.innerHTML = "Sorry! We didn't find it!";
             }
         }
-        document.getElementById('result').innerHTML = txt.value;
+
     }
 </script>
 </body>
