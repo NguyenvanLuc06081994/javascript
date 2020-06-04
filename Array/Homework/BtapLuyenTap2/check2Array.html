@@ -6,25 +6,24 @@
 </head>
 <body>
 <script>
-    let a1 = prompt("Input array 1");
-    let a2 = prompt("Input array 2");
-    let arr = a1.split("");
-    let arr1 = a2.split("");
-    let flag = false;
-    if (arr1.length === arr.length){
+    let a1 = prompt("input array 1 :");
+    let a2 = prompt("input array 2 :");
+    let arr = a1.split('');
+    let arr1 = a2.split('');
+    let flag = true;
+    if (arr.length === arr1.length){
         for (let i = 0; i <arr.length ; i++) {
-            if (arr[i]!==arr1[i]){
-                flag =true;
-                alert("They're not Same!");
+            if (arr[i] !== arr1[i]){
+                flag = false;
+                alert("They're not Same ! ");
             }
         }
-        if (flag === false){
-            alert("They're  Same");
+        if (flag){
+            alert("They are Same!");
         }
     }else{
-        alert("They're not same");
+        alert("They're not Same ! ");
     }
-
 </script>
 </body>
 </html>

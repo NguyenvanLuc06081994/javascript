@@ -6,24 +6,29 @@
 </head>
 <body>
 <h3>Dictionary</h3>
-<input type="text" id="txt">
+<input type="text" id="keyword">
 <button onclick="search()">Search</button>
 <p id="result"></p>
 <script>
-    let arr = ["money", "tiger", "oanh"];
-    let arr1 = ["tien", "ho", "su tu"];
-    let txt = document.getElementById('txt');
-    let result = document.getElementById('result');
-    function search() {
+    function findByKeyWord(arr, keyword) {
         for (let i = 0; i < arr.length; i++) {
-            if (txt.value === arr[i]) {
-                result.innerHTML = arr1[i];
-                break;
-            } else {
-                result.innerHTML = "Sorry! We didn't find it!";
+            if (keyword === arr[i]) {
+                return i;
             }
         }
+        return -1;
+    }
 
+    function search() {
+        let english = ["money", "tiger", "oanh"];
+        let vietnamese = ["tien", "ho", "su tu"];
+        let keyword = document.getElementById('keyword').value;
+        let index = findByKeyWord(english, keyword);
+        if (index !== -1) {
+            document.getElementById('result').innerHTML = vietnamese[index];
+        } else {
+            document.getElementById('result').innerHTML = 'Khong tim thay';
+        }
     }
 </script>
 </body>
