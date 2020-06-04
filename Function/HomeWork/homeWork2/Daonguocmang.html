@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function reserver() {
+        let arr = [];
+        let length = +prompt("input length of array");
+        for (let i = 0; i <length ; i++) {
+            arr[i] = prompt(`value at index ${i} :`);
+        }
+         arr = arr.reverse();
+        return arr;
+    }
+    console.log(reserver());
+</script>
+</body>
+</html>

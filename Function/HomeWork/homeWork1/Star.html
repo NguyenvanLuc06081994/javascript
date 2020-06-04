@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Star</title>
+</head>
+<body>
+<input type="text" id="star">
+<button onclick="changeWord()">Search</button>
+<p id="result"></p>
+<script>
+    let star = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let constellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Major", "Leo"];
+
+    function findKeyWord() {
+        let str = document.getElementById('star').value;
+        for (let i = 0; i < star.length; i++) {
+            if (str === star[i]) {
+                return true;
+            }
+        }
+        return false;
+    }
+    function changeWord() {
+        if (findKeyWord()){
+            document.getElementById("result").innerHTML= constellation[i];
+        }
+    }
+</script>
+</body>
+</html>

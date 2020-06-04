@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prime</title>
+</head>
+<body>
+<script>
+   function isPrime(number) {
+        if (number < 2){
+            return false;
+        }else{
+            for (let i = 2; i < number ; i++) {
+                if (number % i ===0){
+                    return false;
+                }
+            }
+            return true;
+        }
+   }
+   function countPrime() {
+        let number = 2;
+        let sum = 0;
+        while(number <= 1000){
+            if (isPrime(number)){
+                document.write(number + "<br>");
+                sum += number;
+            }
+            number ++;
+        }
+        document.write("sum is: "+ sum);
+   }
+   countPrime();
+</script>
+</body>
+</html>
