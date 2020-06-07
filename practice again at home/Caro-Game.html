@@ -24,22 +24,183 @@
 <script>
     // Vẽ Bảng
     function drawBoard() {
-        let board = document.getElementById("caro");
-        let col = document.getElementById("col").value;
-        let row = document.getElementById("row").value;
-        let str = "";
+        let row = document.getElementById('row').value;
+        let col = document.getElementById('col').value;
+        let str = '';
         for (let i = 0; i <row ; i++) {
             str += "<tr>";
-            for (let j = 0; j < col ; j++) {
-                str += "<td> </td>";
+            for (let j = 0; j <col ; j++) {
+                str += `<td id="cell-${i}-${j}" onclick="clickCell(${i},${j})"></td>`;
             }
         }
-        board.innerHTML = str;
+        document.getElementById('caro').innerHTML =str;
     }
-    // Click vào ô thì chuyển 0 - X;
-    function clickCell() {
+    let turn =1;
+    function clickCell(x,y) {
+        let cell = document.getElementById(`cell-${x}-${y}`);
+        if (cell.innerHTML === ''){
+            if (turn === 1){
+                cell.innerHTML = "x";
+                turn = 2;
+            }else{
+                cell.innerHTML = "o";
+                turn = 1;
+            }
+        }
+        checkWin(x,y);
+    }
+    function getCellValue(x,y) {
+        let cellValue = document.getElementById(`cell-${x}-${y}`).innerText;
+        return cellValue;
+    }
+    function checkWin(x,y) {
+        checkDoc(x,y);
+        checkNgang(x,y);
+        checkCheo1(x,y);
+        checkCheo2(x,y);
+    }
+    function checkDoc(x,y) {
+        let count =1;
+        let i =1;
+        while (getCellValue(x,y) === getCellValue(x+i,y)){
+            count++;
+            i++;
+        }
+        let j = 1;
+        while (getCellValue(x,y) === getCellValue(x-j,y)){
+            count ++;
+            j++;
+        }
+        gameOver(count);
+    }
+    function checkNgang(x,y) {
+        let count =1;
+        let i =1;
+        while (getCellValue(x,y) === getCellValue(x,y+i)){
+            count++;
+            i++;
+        }
+        let j = 1;
+        while (getCellValue(x,y) === getCellValue(x,y-j)){
+            count ++;
+            j++;
+        }
+        gameOver(count);
+    }
+    function checkCheo1(x,y) {
+        let count = 1;
+        let i = 1;
+        while (getCellValue(x,y)=== getCellValue(x+i,y+i)){
+            count ++;
+            i++;
+        }
+        let j = 1;
+        while(getCellValue(x,y)===getCellValue(x-j,y-j)){
+            count ++;
+            j++;
+        }
+        gameOver(count);
+    }
+    function checkCheo2(x,y) {
+        let count = 1;
+        let i = 1;
+        while (getCellValue(x,y)=== getCellValue(x-i,y+i)){
+            count ++;
+            i++;
+        }
+        let j = 1;
+        while(getCellValue(x,y)===getCellValue(x+j,y-j)){
+            count ++;
+            j++;
+        }
+        gameOver(count);
+    }
+    function gameOver(count) {
+        if (count === 5){
+            alert("Game Over");
+        }
+    }
 
-    }
+
+
+    // function drawBoard() {
+    //     let board = document.getElementById("caro");
+    //     let col = document.getElementById("col").value;
+    //     let row = document.getElementById("row").value;
+    //     let str = "";
+    //     for (let i = 0; i < row; i++) {
+    //         str += "<tr>";
+    //         for (let j = 0; j < col; j++) {
+    //             str += `<td id="cell-${i}-${j}" onclick="clickCell(${i},${j})"></td>`;
+    //         }
+    //     }
+    //     board.innerHTML = str;
+    // }
+
+    // Click vào ô thì chuyển 0 - X;
+    // let turn = 1;
+    //
+    // function clickCell(x, y) {
+    //     let cell = document.getElementById(`cell-${x}-${y}`);
+    //     if (cell.innerHTML === '') {
+    //         if (turn === 1) {
+    //             cell.innerHTML = "x";
+    //             turn = 2;
+    //         } else {
+    //             cell.innerHTML = "o";
+    //             turn = 1;
+    //         }
+    //     }
+    //     checkWin(x, y);
+    // }
+    //
+    // function getCellValue(x, y) {
+    //     let cellValue = document.getElementById(`cell-${x}-${y}`).innerText;
+    //     return cellValue;
+    // }
+    //
+    // function checkWin(x, y) {
+    //     checkDoc(x, y);
+    //     checkNgang(x, y);
+    //     // checkCheo1(x, y);
+    //     // checkCheo2(x, y);
+    // }
+    //
+    // function checkDoc(x, y) {
+    //     let count = 1;
+    //     let i = 1;
+    //     while (getCellValue(x, y) === getCellValue(x + i, y)) {
+    //         count++;
+    //         i++
+    //     }
+    //     let j = 1;
+    //     while (getCellValue(x, y) === getCellValue(x - j, y)) {
+    //         count++;
+    //         j++;
+    //     }
+    //     gameOver(count);
+    // }
+    //
+    // function checkNgang(x, y) {
+    //     let count = 1;
+    //     let i = 1;
+    //     while (getCellValue(x, y) === getCellValue(x, y + i)) {
+    //         count++;
+    //         i++
+    //     }
+    //     let j = 1;
+    //     while (getCellValue(x, y) === getCellValue(x, y - j)) {
+    //         count++;
+    //         j++;
+    //     }
+    //     gameOver(count);
+    // }
+    // function gameOver(count) {
+    //     if (count === 5){
+    //         alert("Game Over!");
+    //     }
+    // }
+    // drawBoard();
 </script>
 
 

@@ -3,32 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Product Manager</title>
+    <style>
+        td {
+            border: 1px solid black;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+        }
+    </style>
 </head>
 <body>
-<input id="add"><button onclick="addProduct()">Add</button>
+<button onclick="addProduct()">Add</button>
 <br>
-<input type="text" id="id1" placeholder="Name Product">
-<input type="text" id="id2" placeholder="Color">
-<input type="text" id="id3" placeholder="Price">
-<input type="text" id="id4" placeholder="System">
+<input type="text" id="id0" placeholder="Name Product">
+<input type="text" id="id1" placeholder="Color">
+<input type="text" id="id2" placeholder="Price">
+<input type="text" id="id3" placeholder="System">
 
 <table id="display" style="border: 1px solid black"></table>
 <script>
     let products = [
-        ["Iphone","Black","10000000","IOS"],
-        ["SamSung","White","2000000","AnDroid"],
-        ["OPPO","Red","9000000","AnDroid"]
+        ["Iphone", "Black", "10000000", "IOS"],
+        ["SamSung", "White", "2000000", "AnDroid"],
+        ["OPPO", "Red", "9000000", "AnDroid"]
     ];
 
     function display() {
         let str = '';
         for (let i = 0; i < products.length; i++) {
-            str += "<tr>"
-            for (let j = 0; j <products[i].length ; j++) {
-                str += `<td>${products[i][j]}</td>`
+            str += "<tr>";
+            for (let j = 0; j < products[i].length; j++) {
+                str += `<td>${products[i][j]}</td>`;
             }
-            str += "<td> <button onclick='edit(${i})'>Edit</button></td>"
-            str += "<td> <button onclick='del(${i})'>Delete</button></td>"
+            str += `<td><button onclick="edit(${i})">Edit</button></td>`;
+            str += `<td><button onclick="del(${i})">Delete</button></td>`;
             str += "</tr>";
         }
         document.getElementById('display').innerHTML = str;
@@ -37,26 +45,27 @@
     display();
 
     function addProduct() {
-        let product = [];
-        for (let i = 1; i <= 4; i++) {
-            let value = document.getElementById('id'+i).value;
-            product.push(value);
+        let newProduct = [];
+        for (let i = 0; i < 4; i++) {
+            let newValue = document.getElementById('id' + i).value;
+            newProduct.push(newValue);
         }
-        products.push(product);
+        products.push(newProduct);
         display();
     }
 
     function edit(index) {
-
-        let newValue = prompt("Rename");
-        products[i] = newValue;
-        display();
+        for (let j = 0; j < products[index].length; j++) {
+            let value = document.getElementById('id' + j).value;
+            products[index][j] = value;
+        }
+        display()
     }
-
     function del(index) {
-        products.splice(index, 1);
+        products.splice(index,1);
         display();
     }
+
 </script>
 </body>
 </html>
